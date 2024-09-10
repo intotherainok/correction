@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="ko" id="root">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>경북그랜드 문화투어</title>
+  <link rel="stylesheet" href="asset/css/bootstrap.css">
+  <link rel="stylesheet" href="asset/css/style.css">
+  <link rel="stylesheet" href="asset/fontawesome-free-6.4.0-web/css/all.css">
+</head>
+
+<body>
+  <!-- login modal -->
+  <input id="showLogin" type="radio" name="login" hidden>
+  <input id="hideLogin" type="radio" name="login" hidden checked>
+  <div class="loginModal modal-container pof w-100 h-100 df jcc aic">
+    <div class="modal-content border rounded-5 p-5 text-bg-light">
+      <div class="modal-header mb-5">
+        <h4 class="modal-title w-100 df jcb aic"><span class="col me-3"></span>로그인<span class="col ms-3"></span></h4>
+      </div>
+      <div class="modal-body mb-5">
+        <form>
+          <div class="mb-3">
+            <label for="loginId" class="form-label">아이디</label>
+            <input type="text" class="form-control" id="loginId" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">비밀번호</label>
+            <input type="password" class="form-control" id="loginPassword">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <label for="hideLogin" id="$hideLogin" type="button" class="btn btn-secondary me-3"
+          data-bs-dismiss="modal">종료</label>
+        <label for="hideLogin" id="$submitLogin" type="button" class="btn btn-primary">확인</label>
+      </div>
+    </div>
+  </div>
+  <!-- signup modal -->
+  <input id="showSignup" type="radio" name="signup" hidden>
+  <input id="hideSignup" type="radio" name="signup" hidden checked>
+  <div class="signupModal modal-container pof w-100 h-100 df jcc aic">
+    <div class="modal-content border rounded-5 p-5 text-bg-light">
+      <div class="modal-header mb-5">
+        <h4 class="modal-title w-100 df jcb aic"><span class="col me-3"></span>회원가입<span class="col ms-3"></span></h4>
+      </div>
+      <div class="modal-body mb-5">
+        <form>
+          <div class="mb-3">
+            <label for="signupName" class="form-label">성명</label>
+            <input type="text" class="form-control" id="signupName" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="signupId" class="form-label">아이디</label>
+            <input type="text" class="form-control" id="signupId" aria-describedby="emailHelp">
+          </div>
+          <div class="mb-3">
+            <label for="signupPassword" class="form-label">비밀번호</label>
+            <input type="password" class="form-control" id="signupPassword">
+          </div>
+          <div class="mb-3">
+            <label for="signupTel" class="form-label">전화번호</label>
+            <input type="tel" class="form-control" id="signupTel">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <label for="hideSignup" id="$hideSignup" type="button" class="btn btn-secondary me-3"
+          data-bs-dismiss="modal">종료</label>
+        <label for="hideSignup" id="$submitSignup" type="button" class="btn btn-primary">확인</label>
+      </div>
+    </div>
+  </div>
+  <header class="pof df jcc">
+    <input hidden type="radio" name="side" id="closeSide" checked>
+    <input hidden type="radio" name="side" id="openSide">
+    <div class="side poa df flc shadow-lg">
+      <div class="upper-side"></div>
+      <div class="lower-side df flc tc">
+        <div class="menu-container border-bottom por">
+          <div class="main menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="sub01.html" class="w-100 h-100 por df jcc aic">투어경북</a>
+          </div>
+        </div>
+        <div class="menu-container border-bottom por">
+          <div class="main menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">숙박</a>
+          </div>
+          <div class="sub menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">호텔</a>
+          </div>
+          <div class="sub menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">펜션</a>
+          </div>
+          <div class="sub menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">게스트하우스</a>
+          </div>
+        </div>
+        <div class="menu-container border-bottom por">
+          <div class="main menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">문화유산</a>
+          </div>
+          <div class="sub menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">세계문화유산</a>
+          </div>
+          <div class="sub menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">경주의역사</a>
+          </div>
+          <div class="sub menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">분류별유산</a>
+          </div>
+        </div>
+        <div class="menu-container border-bottom por">
+          <div class="main menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">체험예약/안내</a>
+          </div>
+          <div class="sub menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">체험부스예약</a>
+          </div>
+          <div class="sub menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">관광안내</a>
+          </div>
+          <div class="sub menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">주변관광지</a>
+          </div>
+          <div class="sub menu por w-100">
+            <div class="bg poa w-100 h-100"></div>
+            <a href="#" class="w-100 h-100 por df jcc aic">문화재투어</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hamburger-btns poa">
+      <label for="openSide" class="openSide btn btn-dark rounded-circle w-100"><i class="fa fa-bars"></i></label>
+      <label for="closeSide" class="closeSide btn btn-light rounded-circle w-100"><i class="fa fa-x"></i></label>
+    </div>
+    <div class="df jcb aic header-content h-100">
+      <div class="df jcc aic">
+        <a href="index.html" class="logo">
+          <img src="asset/img/logo.png" alt="logo">
+        </a>
+      </div>
+      <div class="col-5 df flc jce h-100">
+        <div class="upper df justify-content-end aic">
+          <div class="col-4 df jcc aic me-3">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="검색하기">
+              <button class="btn btn-sm btn-dark fa fa-magnifying-glass"></button>
+            </div>
+          </div>
+          <div class="me-3">
+            <label for="showLogin" class="bg-pri px-3 py-2 rounded-2 pop w-100">로그인</label>
+          </div>
+          <div>
+            <label for="showSignup" class="bg-pri px-3 py-2 rounded-2 pop w-100">회원가입</label>
+          </div>
+        </div>
+        <nav class="w-100 df">
+          <div class="menu-container por col-3">
+            <div class="main menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="sub01.html" class="w-100 h-100 por df jcc aic">투어경북</a>
+            </div>
+          </div>
+          <div class="menu-container por col-3">
+            <div class="main menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">숙박</a>
+            </div>
+            <div class="sub menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">호텔</a>
+            </div>
+            <div class="sub menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">펜션</a>
+            </div>
+            <div class="sub menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">게스트하우스</a>
+            </div>
+          </div>
+          <div class="menu-container por col-3">
+            <div class="main menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">문화유산</a>
+            </div>
+            <div class="sub menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">세계문화유산</a>
+            </div>
+            <div class="sub menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">경주의역사</a>
+            </div>
+            <div class="sub menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">분류별유산</a>
+            </div>
+          </div>
+          <div class="menu-container por col-3">
+            <div class="main menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">체험예약/안내</a>
+            </div>
+            <div class="sub menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">체험부스예약</a>
+            </div>
+            <div class="sub menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">관광안내</a>
+            </div>
+            <div class="sub menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">주변관광지</a>
+            </div>
+            <div class="sub menu por w-100">
+              <div class="bg poa w-100 h-100"></div>
+              <a href="#" class="w-100 h-100 por df jcc aic">문화재투어</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <section id="sub-visual" class="por">
+    <img src="asset/img/sunrise-text.png" alt="sunrise-text" class="sunrise-text poa w-100">
+    <img src="asset/img/sunrise.jpg" alt="sunrise" class="w-100">
+    <div class="sub-visual-text poa text-light start-50 bottom-0 translate-middle h1 mb-5 fw-bold">투어경북</div>
+  </section>
+  <section id="tour" class="por my-5 py-5">
+    <div class="section-content por">
+      <div class="section-title mb-5 df">
+        <div class="title-box df flc jcb">
+          <div class="sub-title h5">
+            투어경북소개
+            <span></span>
+          </div>
+          <div class="main-title h2">
+            TOUR GYEONGBUK INTRODUCTION
+          </div>
+        </div>
+      </div>
+      <div class="tour-tab slide por df mb-5">
+        <div class="cube">
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+        </div>
+        <div class="cube">
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+        </div>
+        <div class="cube">
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+        </div>
+        <div class="cube">
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+        </div>
+        <div class="cube">
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+        </div>
+        <div class="cube">
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+        </div>
+        <div class="cube">
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+        </div>
+        <div class="cube">
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+        </div>
+        <div class="cube">
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+        </div>
+        <div class="cube">
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+          <div class="face poa"></div>
+        </div>
+        <div class="points poa df jce aic w-100">
+          <div class="line w-100 poa"></div>
+          <input id="t1" type="radio" name="season" hidden checked>
+          <label for="t1" class="t1 btn text-bg-light border-0 px-3 polygon polygon-sm">전체</label>
+          <input id="t2" type="radio" name="season" hidden>
+          <label for="t2" class="t2 btn text-bg-light border-0 px-3 polygon polygon-sm">산</label>
+          <input id="t3" type="radio" name="season" hidden>
+          <label for="t3" class="t3 btn text-bg-light border-0 px-3 polygon polygon-sm">호수</label>
+          <input id="t4" type="radio" name="season" hidden>
+          <label for="t4" class="t4 btn text-bg-light border-0 px-3 polygon polygon-sm">바다</label>
+          <input id="t5" type="radio" name="season" hidden>
+          <label for="t5" class="t5 btn text-bg-light border-0 px-3 polygon polygon-sm">세계유산</label>
+        </div>
+      </div>
+      <div class="tour-gallery w-100 por">
+        <div class="tour-grid g1 row row-cols-4 g-5">
+          <div class="gallery-container col por">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/1.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/2.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/3.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/4.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/5.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/6.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/7.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/8.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/9.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/10.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/11.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/12.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/13.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/1.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/2.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/3.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/4.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/5.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/6.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/7.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/8.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/9.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/10.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/11.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/1.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/2.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/3.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/4.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/5.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/6.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/7.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/8.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/9.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/10.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/11.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/1.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/2.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/3.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/4.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/5.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/6.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/7.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/8.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/9.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/10.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tour-grid g2 row row-cols-4 g-5">
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/1.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/2.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/3.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/4.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/5.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/6.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/7.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/8.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/9.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/10.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/11.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/12.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/산/13.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tour-grid g3 row row-cols-4 g-5">
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/1.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/2.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/3.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/4.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/5.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/6.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/7.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/8.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/9.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/10.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/호수/11.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tour-grid g4 row row-cols-4 g-5">
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/1.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/2.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/3.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/4.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/5.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/6.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/7.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/8.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/9.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/10.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/바다/11.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+        </div>
+        <div class="tour-grid g5 row row-cols-4 g-5">
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/1.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/2.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/3.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/4.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/5.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/6.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/7.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/8.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/9.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+          <div class="gallery-container col por ">
+            <div class="gallery-img por">
+              <div class="polygon shadow"></div>
+              <img src="asset/img/유네스코/10.jpg" alt="경주시화개나리" class="polygon">
+              <div class="car"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="df jcc">
+    <div class="footer-content df jcb text-light">
+      <div class="df my-3">
+        <div class="df jcc aic">
+          <a href="#" class="logo"><img src="asset/img/logo.png" alt="logo"></a>
+        </div>
+        <div class="df flc jce">
+          <div class="df aic">
+            <div class="px-5 df aic border-end">
+              <a href="#" class="footer-menu">개인정보처리방침</a>
+            </div>
+            <div class="px-5 df aic border-end">
+              <a href="#" class="footer-menu">저작권보호</a>
+            </div>
+            <div class="px-5 df aic">
+              <a href="#" class="footer-menu">사이트오류신고</a>
+            </div>
+          </div>
+          <div class="f14 ps-5">
+            경상북도 안동시 풍천면 도청대로 455 관광문의(경상북도관광홍보관) : 054-745-0753<br>
+            e-mail : gbnadri@gmail.com 홈페이지문의(경상북도관광공사) : 070-4820-6437<br>
+            Copyright ⓒ 2020 Gyeongsangbuk-do all rights reserved.<br>
+          </div>
+        </div>
+      </div>
+      <div class="df flc aie my-3">
+        <div>
+          관광자료신청 <span class="h2 ms-3 fwb mb-0">054-678-5430</span>
+        </div>
+        <div class="mb-3">
+          경북투어문의 <span class="h2 ms-3 fwb mb-0">054-678-5432</span>
+        </div>
+        <div class="df justify-content-end aic">
+          SNS
+          <a href="#"><img class="mx-3 sns" src="asset/img/SNS_01.png" alt="sns"></a>
+          <a href="#"><img class="mx-3 sns" src="asset/img/SNS_04.png" alt="sns"></a>
+          <a href="#"><img class="ms-3 sns" src="asset/img/SNS_03.png" alt="sns"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>
