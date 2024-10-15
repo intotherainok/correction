@@ -1,0 +1,89 @@
+body {
+  font-family: 'Gothic A1', sans-serif;
+  margin: 35px;
+
+}
+
+.ft80{
+  font-weight: bold;
+  font-size: 80px;
+}
+
+.ft70{
+  font-weight: bold;
+  font-size: 70px;
+}
+
+.ft60{
+  font-weight: bold;
+  font-size: 60px;
+}
+
+.ft50{
+  font-weight: bold;
+  font-size: 50px;
+}
+.ft45{
+  font-weight: bold;
+  font-size: 45px;
+}
+.ft40{
+  font-weight: bold;
+  font-size: 40px;
+}
+.ft35{
+  font-weight: bold;
+  font-size: 35px;
+}
+.ft30{
+  font-weight: bold;
+  font-size: 30px;
+}
+.ft25{
+  margin: 20px;
+  line-height: 40px;
+  font-size: 25px;
+  font-weight: bold;
+} 
+
+.ft24{
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.ft20{
+  font-weight: bold;
+  font-size: 20px;
+}
+.ft16{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.fl2{
+  color: black;
+  flex: 2;
+}
+.fl7{
+  color: black;
+  flex: 7;
+}
+.fl5{
+  color: black;
+  flex: 5;
+}
+.fl3{
+  color: black;
+  flex: 3;
+}
+
+.fl1{
+  color: black;
+  flex: 1;
+}
+.ma10 {
+  margin: 0px 10px 0px 10px;
+}
+.ma20 {
+  margin: 0px 20px 0px 20px;
+}   
