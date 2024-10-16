@@ -72,6 +72,10 @@ body {
   color: black;
   flex: 5;
 }
+.fl4 {
+  color: black;
+  flex: 4;
+}
 .fl3{
   color: black;
   flex: 3;
@@ -90,4 +94,8 @@ body {
 
 .btnp {
 padding: 30px 30px;
+}
+
+.pd0 {
+  padding: 0px;
 }
